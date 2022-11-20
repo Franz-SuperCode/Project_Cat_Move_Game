@@ -28,7 +28,7 @@ function turn() {
 
 function addDistance() {
     //Wenn die Katze an den linken Bildschirmrand kommt, soll der Intervall aufhören
-    if (window.innerWidth - 310 <= distanceWalk) {
+    if (window.innerWidth - 155 <= distanceWalk) {
         clearInterval(timer);
         distanceWalk -= 3;
     }
@@ -55,9 +55,6 @@ function addDistance() {
 function catSpeed() {
     //Wenn die Katze gestartet wurde, nur dann soll alles ausgeführt werden
     if (catStartet === true) {
-
-
-
         //Wenn speed in den Minnusbereich geht, dann auf 1 setzen und Funktion beenden
         if (speed <= 1) {
             speed = 1;

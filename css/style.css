@@ -14,7 +14,7 @@ body {
 }
 
 #cat {
-    width: 300px;
+    width: 150px;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -35,11 +35,7 @@ button {
     scale: -1 1;
 }
 
-@media only screen and (max-width: 600px) {
-    #cat {
-        width: 150px;
-    }
-}
+
 
 
 
