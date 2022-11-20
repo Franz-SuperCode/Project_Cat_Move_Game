@@ -2,9 +2,11 @@ let catEl = document.querySelector("#cat");
 let distanceWalk = 3;
 let timer;
 let speed = 50;
+let catStartet = false;
 
 //Beim klick wird die Katze losgehen
 function catWalk() {
+    catStartet = true;
     timer = setInterval(addDistance, speed);
 }
 
@@ -20,10 +22,9 @@ function turn() {
     clearInterval(timer);
     timer = setInterval(addDistance, speed);
     console.log("turn");
+    console.log("speed", speed);
 
 }
-
-
 
 function addDistance() {
     //Wenn die Katze an den linken Bildschirmrand kommt, soll der Intervall aufhören
@@ -52,13 +53,19 @@ function addDistance() {
 }
 
 function catSpeed() {
-    //Wenn speed in den Minnusbereich geht, dann auf 1 setzen und Funktion beenden
-    if (speed <= 0) {
-        speed = 1;
-        return
+    //Wenn die Katze gestartet wurde, nur dann soll alles ausgeführt werden
+    if (catStartet === true) {
+
+
+
+        //Wenn speed in den Minnusbereich geht, dann auf 1 setzen und Funktion beenden
+        if (speed <= 1) {
+            speed = 1;
+            return
+        }
+        speed -= 10;
+        //Den Timer neustarten damit er den neuen Speed Wert verwendet
+        clearInterval(timer);
+        timer = setInterval(addDistance, speed);
     }
-    speed -= 10;
-    //Den Timer neustarten damit er den neuen Speed Wert verwendet
-    clearInterval(timer);
-    timer = setInterval(addDistance, speed);
 }
