@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+}
+
+#backscene {
+    height: 100vh;
+    background: url("https://images.pexels.com/photos/208560/pexels-photo-208560.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center/cover;
+    position: relative;
+}
+
+#cat {
+    width: 300px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+button {
+    font-family: "Press Start 2P", cursive;
+    text-transform: uppercase;
+    background-color: #268ba6;
+    color: rgb(27, 25, 21);
+    width: 165px;
+    height: 37px;
+    font-size: 18px;
+    line-height: 32.5px;
+}
+
+.turn {
+    scale: -1 1;
+}
+
+
+
+
+
+
+
+
+
+/* .animation {
+    animation-timing-function: linear;
+    animation-duration: 5000ms;
+    animation-name: walk;
+    animation-iteration-count: infinite;
+}
+
+@keyframes walk {
+    0% {}
+
+    50% {
+        translate: 500px 0;
+    }
+
+    100% {}
+} */
